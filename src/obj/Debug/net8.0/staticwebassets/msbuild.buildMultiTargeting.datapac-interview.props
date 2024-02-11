@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/datapac-interview.props" />
+</Project>

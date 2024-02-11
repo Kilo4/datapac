@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>datapac-interview</name>
+    </assembly>
+    <members>
+        <member name="M:datapac_interview.Controllers.BookController.CreateBook(datapac_interview.Dto.Book.request.CreateBookRequest)">
+            <summary>
+            Create new book
+            </summary>
+            <response code="201">Returns the newly created book</response>
+            <response code="400">If the item is null</response>
+            <response code="409">If the item all ready exist </response>
+        </member>
+        <member name="T:datapac_interview.Migrations.CreateDbSchemeMigration">
+            <inheritdoc />
+        </member>
+        <member name="M:datapac_interview.Migrations.CreateDbSchemeMigration.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:datapac_interview.Migrations.CreateDbSchemeMigration.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:datapac_interview.Migrations.CreateDbSchemeMigration.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

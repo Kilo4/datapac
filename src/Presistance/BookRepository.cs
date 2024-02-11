@@ -1,7 +1,6 @@
-using System.Data.Entity;
+using Microsoft.EntityFrameworkCore;
 using datapac_interview.Dto.Book.request;
 using datapac_interview.Models;
-using Microsoft.EntityFrameworkCore;
 using MyApi.Models.Context;
 
 namespace datapac_interview.Presistance;

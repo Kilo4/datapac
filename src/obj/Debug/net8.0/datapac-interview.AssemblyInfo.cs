@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("datapac-interview")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+218d25b3b41506e3327c18c9121b807616df7348")]
 [assembly: System.Reflection.AssemblyProductAttribute("datapac-interview")]
 [assembly: System.Reflection.AssemblyTitleAttribute("datapac-interview")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

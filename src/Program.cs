@@ -29,9 +29,9 @@ builder.Services.AddAutoMapper(cfg =>
 builder.Services.AddScoped<IBookRepository, BookRepository>();
 builder.Services.AddScoped<IBookService, BookService>();
 builder.Services.AddScoped<IOrderRepository, OrderRepository>();
-// builder.Services.AddScoped<IReminderService, ReminderService>();
-// builder.Services.AddScoped<IEmailService, EmailService>();
-// builder.Services.AddScoped<EmailService>();
+builder.Services.AddScoped<IReminderService, ReminderService>();
+builder.Services.AddScoped<IEmailService, EmailService>();
+builder.Services.AddScoped<EmailService>();
 
 builder.Services.AddSwaggerGen(options =>
 {

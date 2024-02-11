@@ -13,6 +13,7 @@
     <SourceRoot Include="/Users/work/.nuget/packages/" />
   </ItemGroup>
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)xunit.core/2.6.6/build/xunit.core.props" Condition="Exists('$(NuGetPackageRoot)xunit.core/2.6.6/build/xunit.core.props')" />
     <Import Project="$(NuGetPackageRoot)microsoft.extensions.apidescription.server/6.0.5/build/Microsoft.Extensions.ApiDescription.Server.props" Condition="Exists('$(NuGetPackageRoot)microsoft.extensions.apidescription.server/6.0.5/build/Microsoft.Extensions.ApiDescription.Server.props')" />
     <Import Project="$(NuGetPackageRoot)swashbuckle.aspnetcore/6.4.0/build/Swashbuckle.AspNetCore.props" Condition="Exists('$(NuGetPackageRoot)swashbuckle.aspnetcore/6.4.0/build/Swashbuckle.AspNetCore.props')" />
     <Import Project="$(NuGetPackageRoot)microsoft.entityframeworkcore/8.0.1/buildTransitive/net8.0/Microsoft.EntityFrameworkCore.props" Condition="Exists('$(NuGetPackageRoot)microsoft.entityframeworkcore/8.0.1/buildTransitive/net8.0/Microsoft.EntityFrameworkCore.props')" />
@@ -20,6 +21,7 @@
     <Import Project="$(NuGetPackageRoot)entityframework/6.3.0/buildTransitive/EntityFramework.props" Condition="Exists('$(NuGetPackageRoot)entityframework/6.3.0/buildTransitive/EntityFramework.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Pkgxunit_analyzers Condition=" '$(Pkgxunit_analyzers)' == '' ">/Users/work/.nuget/packages/xunit.analyzers/1.10.0</Pkgxunit_analyzers>
     <PkgMicrosoft_Extensions_ApiDescription_Server Condition=" '$(PkgMicrosoft_Extensions_ApiDescription_Server)' == '' ">/Users/work/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5</PkgMicrosoft_Extensions_ApiDescription_Server>
     <PkgSwagger-Net Condition=" '$(PkgSwagger-Net)' == '' ">/Users/work/.nuget/packages/swagger-net/8.5.10.302</PkgSwagger-Net>
     <PkgMicrosoft_CodeAnalysis_Analyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_Analyzers)' == '' ">/Users/work/.nuget/packages/microsoft.codeanalysis.analyzers/3.3.3</PkgMicrosoft_CodeAnalysis_Analyzers>

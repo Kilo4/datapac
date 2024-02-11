@@ -17,14 +17,24 @@ public class OrderController(AppDbContext context, IMapper mapper, IOrderReposit
     [HttpPost]
     [ProducesResponseType(StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status409Conflict)]
     public async Task<ActionResult<Order>> createOrder([FromBody] CreateOrderRequest request)
     {
         if (!ModelState.IsValid)
             return BadRequest(ModelState);
         
         var items = mapper.Map<List<UpdateOrderedBookRequest>, List<Book>>(request.Books);
-        var updatedBooks = await bookService.UpdateBooksWithOrder(request.Books);
         
+        List<Book> updatedBooks = new List<Book>();
+        try
+        {
+            updatedBooks = await bookService.UpdateBooksWithOrder(request.Books);
+        }
+        catch (Exception ex)
+        {
+            return Conflict(ex.Message);
+        }
+
         var order = await orderRepository.CreateOrder(updatedBooks, request);
         
         return CreatedAtAction(nameof(createOrder), new { id = order.Id }, order);

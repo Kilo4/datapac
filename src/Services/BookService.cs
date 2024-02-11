@@ -1,6 +1,7 @@
 using datapac_interview.Dto.Book.request;
 using datapac_interview.Models;
 using datapac_interview.Presistance;
+using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace datapac_interview.Services;
 
@@ -11,7 +12,13 @@ public class BookService(IBookRepository bookRepository): IBookService
     {
         var bookIds = requestedBooks.Select(s => s.Id).ToList();
         var existingBooks = await bookRepository.GetBooksByIdsAsync(bookIds);
-        
+        var conflictBooks = existingBooks.Where(b => b.Available != true).ToList();
+        if (conflictBooks.Count > 0)
+        {
+            var conflictBookIds = string.Join(", ", conflictBooks.Select(book => book.Id));
+            throw new Exception($"Books are already booked: {conflictBookIds}");
+        }
+
         List<Book> updateData = new List<Book>();
         foreach (var book in existingBooks)
         {

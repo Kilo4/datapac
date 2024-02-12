@@ -10,21 +10,6 @@ services:
       - ./db:/var/lib/postgresql/data
     env_file:
       - docker-postgres-db.env
-  azure-sql-edge-data: 
-    image: mcr.microsoft.com/azure-sql-edge  
-    environment:
-      - docker-azure-sql-db.env
-    ports:
-      - "1433:1433"                        # Map container port 1433 to host port 1433
-    volumes:
-      - ./azure-sql-edge-data:/var/opt/mssql
-    deploy:
-      resources:
-        limits:
-          cpus: '2'
-          memory: '2G'
-
 
 volumes:
-  azure-sql-edge-data:
   db:

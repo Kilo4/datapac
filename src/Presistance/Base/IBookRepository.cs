@@ -10,7 +10,7 @@ public interface IBookRepository
     Task<Book?> GetByTitleAndAuthorAsync(string title, string author);
     Task<bool> CheckByTitleAndAuthorAsync(string title, string author);
     Task CreateAsync(Book book);
-    Task UpdateAsync(Book oldbook, UpdateBookRequest book);
+    Task<Book> UpdateAsync(Book oldbook, UpdateBookRequest book);
     Task UpdateBatchAsync(List<Book> books);
     Task DeleteAsync(Book book);
 }

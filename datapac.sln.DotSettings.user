@@ -2,7 +2,10 @@
 	<s:String x:Key="/Default/Environment/AssemblyExplorer/XmlDocument/@EntryValue">&lt;AssemblyExplorer&gt;
   &lt;Assembly Path="/Users/work/.nuget/packages/swashbuckle.aspnetcore.annotations/6.5.0/lib/net7.0/Swashbuckle.AspNetCore.Annotations.dll" /&gt;
 &lt;/AssemblyExplorer&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=6e8dbb7e_002D1f54_002D44e7_002D85e5_002Dc12bade9e08a/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from &amp;lt;tests&amp;gt;" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=6e8dbb7e_002D1f54_002D44e7_002D85e5_002Dc12bade9e08a/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from &amp;lt;tests&amp;gt;" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;Project Location="/Users/work/Projects/datapac/tests" Presentation="&amp;lt;tests&amp;gt;" /&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=7e868928_002D8e92_002D4f71_002D8c1b_002Daa4eb52a29a4/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from BookControllerTest.cs" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;ProjectFile&gt;80E945AB-345D-4BD6-9174-531BC8B25CD6/d:Controllers/f:BookControllerTest.cs&lt;/ProjectFile&gt;
 &lt;/SessionState&gt;</s:String>
 	</wpf:ResourceDictionary>

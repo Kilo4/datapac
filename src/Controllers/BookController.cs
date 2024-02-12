@@ -56,9 +56,9 @@ public class BookController(AppDbContext context, IMapper mapper, IBookRepositor
         if (exist == true)
             return Conflict("Book exists");
 
-        await bookRepository.UpdateAsync(result, book);
+        var updatedBook = await bookRepository.UpdateAsync(result, book);
         
-        return CreatedAtAction(nameof(GetBook), new { id = Id }, result);
+        return CreatedAtAction(nameof(UpdateBook), new { id = Id }, updatedBook);
     }
 
     [HttpGet("{Id}")]

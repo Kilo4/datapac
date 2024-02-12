@@ -38,13 +38,14 @@ public class BookRepository(AppDbContext context) : IBookRepository
         await context.SaveChangesAsync();
     }
 
-    public async Task UpdateAsync(Book oldBook ,UpdateBookRequest book)
+    public async Task<Book> UpdateAsync(Book oldBook ,UpdateBookRequest book)
     {
         oldBook.Author = book.Author ?? oldBook.Author;
         oldBook.Title = book.Title ?? oldBook.Title;
         oldBook.Price = book.Price ?? oldBook.Price;
         oldBook.Available = book.Available ?? oldBook.Available;
         await context.SaveChangesAsync();
+        return oldBook;
     }
     
     public async Task UpdateBatchAsync(List<Book> books)

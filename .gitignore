@@ -1,4 +1,4 @@
 /.idea
 /.git
-local.db
-/.local.azure-sql-edge-data
+local/db/*
+local/azure-sql-edge-data/*
